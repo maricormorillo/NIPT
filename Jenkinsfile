@@ -7,14 +7,14 @@ pipeline
         {
             steps 
             {
-                echo 'php --version'
+                sh 'php --version'
             }
         }
         stage('Index') 
         {
             steps 
             {
-                echo 'php index.php'
+                sh 'php index.php'
             }
         }        
     }
