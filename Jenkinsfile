@@ -7,14 +7,14 @@ pipeline
         {
             steps 
             {
-                sh 'php --version'
+                bat 'php --version'
             }
         }
         stage('Index') 
         {
             steps 
             {
-                sh 'php index.php'
+                bat 'php index.php'
             }
         }        
     }
