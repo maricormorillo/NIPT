@@ -2,20 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Verify Version') {
             steps {
-                echo 'Building..'
+                sh 'php --version'
             }
         }
-        stage('Test') {
+        stage('Index') {
             steps {
-                echo 'Testing..'
+                sh 'php index.php'
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+        }        
     }
 }
