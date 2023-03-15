@@ -1,15 +1,20 @@
-pipeline {
+pipeline 
+{   
     agent any
-
-    stages {
-        stage('Verify Version') {
-            steps {
-                sh 'php --version'
+    stages 
+    {
+        stage('Verify Version') 
+        {
+            steps 
+            {
+                echo 'php --version'
             }
         }
-        stage('Index') {
-            steps {
-                sh 'php index.php'
+        stage('Index') 
+        {
+            steps 
+            {
+                echo 'php index.php'
             }
         }        
     }
